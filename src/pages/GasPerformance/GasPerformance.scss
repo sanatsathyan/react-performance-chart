@@ -1,0 +1,15 @@
+.gas-performance-container {
+  background-color: #303030;
+  color: #ffffff;
+  padding: 12px 8px;
+  .metrics-container {
+    display: flex;
+    margin-bottom: 24px;
+    .vertical-divider {
+      display: flex;
+      width: 1px;
+      background: #ddd;
+      margin: 0 32px 0 18px;
+    }
+  }
+}

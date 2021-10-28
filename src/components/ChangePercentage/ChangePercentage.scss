@@ -1,0 +1,24 @@
+.increase-value,
+.decrease-value {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+.value-change-icon {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  margin: 0px 2px 0px 4px;
+}
+.increase-value {
+  color: #7cb635;
+  .value-change-icon {
+    background-color: #7cb635;
+  }
+}
+.decrease-value {
+  color: #cc0000;
+  .value-change-icon {
+    background-color: #cc0000;
+  }
+}
