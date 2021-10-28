@@ -9,6 +9,8 @@ import "./GasPerformance.scss";
 export const GasPerformanceMetrics = () => {
   const apiContext = useContext<IGasPerformance>(PerformanceContext);
 
+  const utilityMeasurementUnit = apiContext.utilityMeasurementUnit;
+
   const totalAggregations =
     apiContext.regions[0].facilities[0].totalAggregations;
 
@@ -16,15 +18,21 @@ export const GasPerformanceMetrics = () => {
     <div className="metrics-container">
       <PerformanceHeader
         title="Actual"
-        value={`${totalAggregations.totalActualConsumption}thm`}
+        value={`${
+          totalAggregations.totalActualConsumption + utilityMeasurementUnit
+        }`}
       />
       <PerformanceHeader
         title="Baseline"
-        value={`${totalAggregations.totalBaselineConsumption}thm`}
+        value={`${
+          totalAggregations.totalBaselineConsumption + utilityMeasurementUnit
+        }`}
       />
       <PerformanceHeader
         title="Savings"
-        value={`${totalAggregations.totalConsumptionSavings}thm`}
+        value={`${
+          totalAggregations.totalConsumptionSavings + utilityMeasurementUnit
+        }`}
         changePercentage={totalAggregations.totalConsumptionSavingsPercentage}
       />
       <div className="vertical-divider" />

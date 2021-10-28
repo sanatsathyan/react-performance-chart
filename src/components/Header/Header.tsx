@@ -4,7 +4,7 @@ import "./Header.scss";
 
 type Props = {
   title: string;
-  tooltipContent: string;
+  tooltipContent?: string;
 };
 
 export const Header = ({ title, tooltipContent }: Props) => {

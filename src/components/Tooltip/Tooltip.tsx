@@ -3,11 +3,20 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 type Props = {
   title: string;
-  arrow: boolean;
-  fontSize: number;
+  arrow?: boolean;
+  fontSize?: number;
 };
 
-export const Tooltip = ({ title, arrow, fontSize }: Props) => {
+const defaultProps = {
+  arrow: false,
+  fontSize: 14,
+};
+
+export const Tooltip = ({
+  title,
+  arrow,
+  fontSize,
+}: Props & typeof defaultProps) => {
   return (
     <div className="tooltip-container">
       <MaterialTooltip title={title} arrow={arrow}>
@@ -16,3 +25,5 @@ export const Tooltip = ({ title, arrow, fontSize }: Props) => {
     </div>
   );
 };
+
+Tooltip.defaultProps = defaultProps;
