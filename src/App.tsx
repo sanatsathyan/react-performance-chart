@@ -1,7 +1,7 @@
-import { GasPerformance } from "./pages/GasPerformance/GasPerformance";
+import { Main } from "./pages";
 
 function App() {
-  return <GasPerformance />;
+  return <Main />;
 }
 
 export default App;

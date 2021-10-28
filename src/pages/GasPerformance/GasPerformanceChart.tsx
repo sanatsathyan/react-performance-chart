@@ -190,7 +190,5 @@ export const GasPerformanceChart = () => {
     },
   ];
 
-  console.log(monthwiseAggregations);
-
   return <PerformanceChart options={options} />;
 };

@@ -13,7 +13,7 @@ const PerformanceHeader = ({ value, title, changePercentage }: Props) => {
     <div className="performance-header-container">
       <div className="performance-value-section">
         <span className="performance-header-value">{value}</span>
-        {changePercentage && <ChangePercentage value={changePercentage} />}
+        <ChangePercentage value={changePercentage || 0} />
       </div>
       <span className="performance-header-title">{title}</span>
     </div>
