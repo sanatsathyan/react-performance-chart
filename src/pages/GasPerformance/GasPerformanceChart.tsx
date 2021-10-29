@@ -60,7 +60,6 @@ const options: Options = {
         },
       },
       labels: {
-        //format: "${value}K",
         formatter: function (object) {
           const formattedValue = parseInt(object.value.toString()) / 1000;
           return formattedValue === 0
